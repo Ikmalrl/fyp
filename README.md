@@ -1,4 +1,4 @@
-# SOC Estimation of Li-Ion Batteries using an Adaptive EKF
+# SOC Estimation of Li-Ion Batteries using an EKF
 
 **PROJECT OVERVIEW:**
 - **Goal:** Dynamic State of Charge (SOC) estimation of a lithium-ion battery using an Extended Kalman Filter (EKF) based on a Second-Order RC Equivalent Circuit Model (2-RC ECM).
