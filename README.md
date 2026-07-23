@@ -20,7 +20,7 @@ Parameter identification from HPPC data, adapted to this dataset's actual protoc
 Builds the OCV(SOC, T) surface with **PCHIP** (shape-preserving, no overshoot next to the steep tail), linear extension to 0% SOC, and a precomputed **dOCV/dSOC gradient grid** for the EKF Jacobian.
 
 ### Phase 2 — `Phase2_ML_LookupTable.m`
-Machine-learning parameter surfaces over (SOC, T) using **Gaussian Process Regression** (ARD squared-exponential kernel, log-space targets). GPR suits the ~60-point training set: smooth surfaces, graceful interpolation between the five measured temperatures, and uncertainty bands. A Random Forest baseline is evaluated on **identical 5-fold cross-validation folds** so the model choice is evidence-based (the old training-set R² of a memorising forest is not a valid metric).
+Machine-learning parameter surfaces over (SOC, T) using **Gaussian Process Regression** (ARD squared-exponential kernel, log-space targets). GPR suits the ~60-point training set: smooth surfaces, graceful interpolation between the five measured temperatures, and uncertainty bands.
 
 ### Phase 3 — `Phase3_EKF_Validation.m`
 Adaptive EKF (state `[SOC; V1; V2]`) validated on all five HWFET files:
